@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FormUserDetails from "./FormUserDetails";
 import FormPersonalDetails from "./FormPersonalDetails";
 import Confirm from "./Confirm";
+import Success from "./Success";
 
 const UserForm = () => {
   const [state, setstate] = useState({
@@ -59,7 +60,7 @@ const UserForm = () => {
         <Confirm nextStep={nextStep} prevStep={prevStep} values={values} />
       );
     case 4:
-      return <h1>Success</h1>;
+      return <Success />;
   }
 
   return <div></div>;

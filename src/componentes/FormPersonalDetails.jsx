@@ -17,7 +17,7 @@ const FormPersonalDetails = ({ values, handleChange, nextStep, prevStep }) => {
   return (
     <MuiThemeProvider>
       <>
-        <AppBar title="Enter Persoal Details" />
+        <AppBar title="Enter Personal Details" />
         <TextField
           hintText="Enter Your Occupation"
           floatingLabelText="Occupation"

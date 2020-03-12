@@ -4,11 +4,16 @@ import AppBar from "material-ui/AppBar";
 import { List, ListItem } from "material-ui/List";
 import RaisedButton from "material-ui/RaisedButton";
 
-const FormUserDetails = ({ values, prevStep, nextStep }) => {
+const Confirm = ({ values, prevStep, nextStep }) => {
   const continueNext = e => {
     e.preventDefault();
     // Process FORM e.g. send data to API, etc
     nextStep();
+  };
+
+  const back = e => {
+    e.preventDefault();
+    prevStep();
   };
 
   const { firstName, lastName, email, occupation, city, bio } = values;
@@ -27,7 +32,13 @@ const FormUserDetails = ({ values, prevStep, nextStep }) => {
         </List>
         <br />
         <RaisedButton
-          label="Continue"
+          label="back"
+          primary={true}
+          style={styles.button}
+          onClick={back}
+        />
+        <RaisedButton
+          label="Confirm & Continue"
           primary={true}
           style={styles.button}
           onClick={continueNext}
@@ -43,4 +54,4 @@ const styles = {
   }
 };
 
-export default FormUserDetails;
+export default Confirm;
