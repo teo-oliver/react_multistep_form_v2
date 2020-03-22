@@ -38,8 +38,22 @@ const GlobalProvider = ({ children }) => {
     });
   };
 
+  //    Proceed to next step
+  const nextStep = e => {
+    e.preventDefault();
+    changeGlobalState({ ...globalState, step: globalState.step + 1 });
+  };
+
+  //    Go back to prev step
+  const prevStep = e => {
+    e.preventDefault();
+    changeGlobalState({ ...globalState, step: globalState.step - 1 });
+  };
+
   return (
-    <GlobalContext.Provider value={{ globalState, changeGlobalState }}>
+    <GlobalContext.Provider
+      value={{ globalState, changeGlobalState, prevStep, nextStep }}
+    >
       {children}
     </GlobalContext.Provider>
   );

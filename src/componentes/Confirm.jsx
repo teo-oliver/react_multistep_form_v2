@@ -31,18 +31,6 @@ const Confirm = ({ values, prevStep, nextStep }) => {
           <ListItem primaryText="Bio" secondaryText={bio} />
         </List>
         <br />
-        <RaisedButton
-          label="back"
-          primary={true}
-          style={styles.button}
-          onClick={back}
-        />
-        <RaisedButton
-          label="Confirm & Continue"
-          primary={true}
-          style={styles.button}
-          onClick={continueNext}
-        />
       </>
     </MuiThemeProvider>
   );

@@ -5,10 +5,10 @@ import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 
 const FormUserDetails = ({ values, handleChange, nextStep }) => {
-  const continueNext = e => {
-    e.preventDefault();
-    nextStep();
-  };
+  // const continueNext = e => {
+  //   e.preventDefault();
+  //   nextStep();
+  // };
 
   return (
     <MuiThemeProvider>
@@ -36,12 +36,6 @@ const FormUserDetails = ({ values, handleChange, nextStep }) => {
           defaultValue={values.email}
         />
         <br />
-        <RaisedButton
-          label="Continue"
-          primary={true}
-          style={styles.button}
-          onClick={continueNext}
-        />
       </>
     </MuiThemeProvider>
   );

@@ -5,14 +5,14 @@ import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 
 const FormPersonalDetails = ({ values, handleChange, nextStep, prevStep }) => {
-  const continueNext = e => {
-    e.preventDefault();
-    nextStep();
-  };
-  const back = e => {
-    e.preventDefault();
-    prevStep();
-  };
+  // const continueNext = e => {
+  //   e.preventDefault();
+  //   nextStep();
+  // };
+  // const back = e => {
+  //   e.preventDefault();
+  //   prevStep();
+  // };
 
   return (
     <MuiThemeProvider>
@@ -37,20 +37,6 @@ const FormPersonalDetails = ({ values, handleChange, nextStep, prevStep }) => {
           floatingLabelText="Bio"
           onChange={handleChange("bio")}
           defaultValue={values.bio}
-        />
-        <br />
-        <RaisedButton
-          label="Continue"
-          primary={true}
-          style={styles.button}
-          onClick={continueNext}
-        />
-        <br />
-        <RaisedButton
-          label="Back"
-          primary={false}
-          style={styles.button}
-          onClick={back}
         />
       </>
     </MuiThemeProvider>
